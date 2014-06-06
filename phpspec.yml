@@ -1,3 +1,12 @@
+suites:
+    core_suite:
+        namespace: WPBin
+        src_path: src
+    web_suite:
+        namespace: WPBinWeb
+        src_path: app/classes
+
 extensions:
     - PhpSpec\NyanFormattersExtension\Extension
+
 formatter.name: nyan.dino
