@@ -2,8 +2,8 @@
 
 namespace WPBin\Usecase\Tag;
 
-use WPBin\Entity\Tag;
-use WPBin\Entity\Tag\Repository;
+use WPBin\Usecase\Tag\CreateData;
+use WPBin\Usecase\Tag\CreateRepository;
 use WPBin\Tool\Validator;
 
 class Create
@@ -17,15 +17,13 @@ class Create
         $this->valid = $valid;
     }
 
-    public function interact(Tag $tag)
+    public function interact(CreateData $data)
     {
-        $this->valid->check($tag);
+        $this->valid->check($data);
 
-        $tag->id = $this->repo->create(
-            $tag->name,
-            $tag->url
+        return $this->repo->create(
+            $data->name,
+            $data->url
         );
-
-        return $tag->id;
     }
 }

@@ -5,16 +5,17 @@ namespace spec\WPBin\Usecase\Tag;
 use WPBin\Entity\Tag;
 use WPBin\Tool\Validator;
 use WPBin\Usecase\Tag\CreateRepository;
+use WPBin\Usecase\Tag\CreateData;
 
 use PhpSpec\ObjectBehavior;
 
 class CreateSpec extends ObjectBehavior
 {
-    function let(CreateRepository $repo, Validator $valid, Tag $tag)
+    function let(CreateRepository $repo, Validator $valid, CreateData $data)
     {
-        $tag->beConstructedWith([]);
-        $tag->name = 'wp_some_function';
-        $tag->url = 'codex.wordpress.org/function/wp_some_function';
+        $data->beConstructedWith(array());
+        $data->name = 'wp_some_function';
+        $data->url = 'http://codex.wordpress.org/function/wp_some_function';
 
         $this->beConstructedWith($repo, $valid);
     }
@@ -24,15 +25,9 @@ class CreateSpec extends ObjectBehavior
         $this->shouldHaveType('WPBin\Usecase\Tag\Create');
     }
 
-    function it_interacts_with_the_validator($valid, $repo, $tag)
+    function it_interacts_with_the_validator($repo, $valid, $data)
     {
-        $valid->check($tag)->shouldBeCalled()->willReturn(true);
-
-        $repo->create(
-            $tag->name,
-            $tag->url
-        );
-
-        $this->interact($tag);
+        $valid->check($data)->shouldBeCalled()->willReturn(true);
+        $this->interact($data);
     }
 }
