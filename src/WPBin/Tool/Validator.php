@@ -2,14 +2,14 @@
 
 namespace WPBin\Tool;
 
-use WPBin\Entity;
+use WPBin\Data;
 
 interface Validator
 {
     /**
-     * @param Entity $entity Entity to be checked
+     * @param Data $entity Data to be checked
      * @return bool
      * @throws WPBin\Exception\Validator If not valid
      */
-    public function check(Entity $entity);
+    public function check(Data $entity);
 }
