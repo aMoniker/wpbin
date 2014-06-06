@@ -4,7 +4,8 @@
 	"keywords": ["wordpress", "paste", "wpbin"],
 	"license": "Copyright 2014 Viresco LLC",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"nategood/httpful": "*"
 	},
     "require-dev": {
         "phpspec/phpspec": "~2.0",
