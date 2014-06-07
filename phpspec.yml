@@ -1,10 +1,10 @@
 suites:
     core_suite:
-        namespace: WPBin
+        namespace: WPBin\Core
         src_path: src
     web_suite:
-        namespace: WPBinWeb
-        src_path: app/classes
+        namespace: WPBin\Web
+        src_path: app
 
 extensions:
     - PhpSpec\Laravel\Extension\LaravelExtension

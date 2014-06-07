@@ -22,7 +22,8 @@
 			"app/tests/TestCase.php"
 		],
         "psr-0": {
-            "WPBin\\": "src"
+            "WPBin\\Core": "src",
+            "WPBin\\Web": "app"
         }
 	},
 	"scripts": {
