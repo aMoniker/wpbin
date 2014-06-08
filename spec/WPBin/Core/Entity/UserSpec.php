@@ -2,13 +2,16 @@
 
 namespace spec\WPBin\Core\Entity;
 
+use WPBin\Core\Tool\Validator\User as UserValidator;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 class UserSpec extends ObjectBehavior
 {
-    function let()
+    function let(UserValidator $validator)
     {
+        $validator->check(Argument::any())->willReturn(true);
+
         $this->beConstructedWith([
             'id'         => 1,
             'first_name' => 'Paste',
@@ -18,7 +21,7 @@ class UserSpec extends ObjectBehavior
             'active'     => 1,
             'created'    => strtotime('June 2nd 2014'),
             'updated'    => strtotime('June 2nd 2014 2:30pm'),
-        ]);
+        ], $validator);
     }
 
     function it_is_initializable()
@@ -26,56 +29,95 @@ class UserSpec extends ObjectBehavior
         $this->shouldHaveType('WPBin\Core\Entity\User');
     }
 
-    function it_has_an_id()
+    function it_can_get_its_id()
     {
-        $this->id->shouldBe(1);
+        $this->get('id')->shouldBe(1);
     }
 
-    function it_has_a_first_name()
+    function it_can_set_its_id()
     {
-        $this->first_name->shouldBe('Paste');
+        $this->set('id', 2)->shouldBe(true);
     }
 
-    function it_has_a_last_name()
+    function it_can_get_its_first_name()
     {
-        $this->last_name->shouldBe('Face');
+        $this->get('first_name')->shouldBe('Paste');
     }
 
-    function it_has_a_username()
+    function it_can_set_its_first_name()
     {
-        $this->username->shouldBe('pasteface');
+        $this->set('first_name', 'Etsap')->shouldBe(true);
     }
 
-    function it_has_an_email()
+    function it_can_get_its_last_name()
     {
-        $this->email->shouldBe('paste@fa.ce');
+        $this->get('last_name')->shouldBe('Face');
     }
 
-    function it_has_an_active_flat()
+    function it_can_set_its_last_name()
     {
-        $this->active->shouldBe(1);
+        $this->set('last_name', 'Ecaf')->shouldBe(true);
     }
 
-    function it_has_a_created_timestamp()
+    function it_can_get_its_username()
     {
-        $this->created->shouldBe(strtotime('June 2nd 2014'));
+        $this->get('username')->shouldBe('pasteface');
     }
 
-    function it_has_an_updated_timestamp()
+    function it_can_set_its_username()
     {
-        $this->updated->shouldBe(strtotime('June 2nd 2014 2:30pm'));
+        $this->set('username', 'ecafetsap')->shouldBe(true);
     }
 
-    function it_can_set_data_from_an_array()
+    function it_can_get_its_email()
     {
-        // ArrayExchange trait
-        $this->setData(array('username' => 'pasteyface'))->shouldReturn($this);
-        $this->username->shouldBe('pasteyface');
+        $this->get('email')->shouldBe('paste@fa.ce');
     }
 
-    function it_can_be_converted_to_an_array()
+    function it_can_set_its_email()
     {
-        // ArrayExchange trait
-        $this->asArray()->shouldHaveKey('username');
+        $this->set('email', 'etsap@ec.af');
+    }
+
+    function it_can_get_its_active_flag()
+    {
+        $this->get('active')->shouldBe(1);
+    }
+
+    function it_can_set_its_active_flag()
+    {
+        $this->set('active', 0)->shouldBe(true);
+    }
+
+    function it_can_get_its_created_timestamp()
+    {
+        $this->get('created')->shouldBe(strtotime('June 2nd 2014'));
+    }
+
+    function it_can_get_its_created_timestamp_in_another_format()
+    {
+        $this->get('created', 'd/m/y')
+            ->shouldBe(date('d/m/y', strtotime('June 2nd 2014')));
+    }
+
+    function it_can_set_its_created_timestamp()
+    {
+        $this->set('created', strtotime('June 3rd 2014'))->shouldBe(true);
+    }
+
+    function it_can_get_its_updated_timestamp()
+    {
+        $this->get('updated')->shouldBe(strtotime('June 2nd 2014 2:30pm'));
+    }
+
+    function it_can_get_its_updated_timestamp_in_another_format()
+    {
+        $this->get('updated', 'd/m/y')
+            ->shouldBe(date('d/m/y', strtotime('June 2nd 2014 2:30pm')));
+    }
+
+    function it_can_set_its_updated_timestamp()
+    {
+        $this->set('updated', strtotime('June 3rd 2014 3:00pm'))->shouldBe(true);
     }
 }

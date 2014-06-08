@@ -2,20 +2,23 @@
 
 namespace spec\WPBin\Core\Entity;
 
+use WPBin\Core\Tool\Validator\Tag as TagValidator;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 class TagSpec extends ObjectBehavior
 {
-    function let()
+    function let(TagValidator $validator)
     {
+        $validator->check(Argument::any())->willReturn(true);
+
         $this->beConstructedWith([
             'id'      => 1,
             'name'    => 'wp_do_the_stuff',
             'url'     => 'codex.wordpress.com/functionthingy/wp_do_the_stuff',
             'created' => strtotime('June 2nd 2014'),
             'updated' => strtotime('June 2nd 2014 2:30pm'),
-        ]);
+        ], $validator);
     }
 
     function it_is_initializable()
@@ -23,41 +26,67 @@ class TagSpec extends ObjectBehavior
         $this->shouldHaveType('WPBin\Core\Entity\Tag');
     }
 
-    function it_has_an_id()
+    function it_can_get_its_id()
     {
-        $this->id->shouldBe(1);
+        $this->get('id')->shouldBe(1);
     }
 
-    function it_has_a_name()
+    function it_can_set_its_id()
     {
-        $this->name->shouldBe('wp_do_the_stuff');
+        $this->set('id', 2)->shouldBe(true);
     }
 
-    function it_has_a_url()
+    function it_can_get_its_name()
     {
-        $this->url->shouldBe('codex.wordpress.com/functionthingy/wp_do_the_stuff');
+        $this->get('name')->shouldBe('wp_do_the_stuff');
     }
 
-    function it_has_a_created_timestamp()
+    function it_can_set_its_name()
     {
-        $this->created->shouldBe(strtotime('June 2nd 2014'));
+        $this->set('name', 'setnametest')->shouldBe(true);
     }
 
-    function it_has_an_updated_timestamp()
+    function it_can_get_its_url()
     {
-        $this->updated->shouldBe(strtotime('June 2nd 2014 2:30pm'));
+        $this->get('url')
+            ->shouldBe('codex.wordpress.com/functionthingy/wp_do_the_stuff');
     }
 
-    function it_can_set_data_from_an_array()
+    function it_can_set_its_url()
     {
-        // ArrayExchange trait
-        $this->setData(array('name' => 'wp_all_the_things'))->shouldReturn($this);
-        $this->name->shouldBe('wp_all_the_things');
+        $this->set('url', 'http://foo.bar.baz')->shouldBe(true);
     }
 
-    function it_can_be_converted_to_an_array()
+    function it_can_get_its_created_timestamp()
     {
-        // ArrayExchange trait
-        $this->asArray()->shouldHaveKey('name');
+        $this->get('created')->shouldBe(strtotime('June 2nd 2014'));
+    }
+
+    function it_can_get_its_created_timestamp_in_another_format()
+    {
+        $this->get('created', 'd/m/y')
+            ->shouldBe(date('d/m/y', strtotime('June 2nd 2014')));
+    }
+
+    function it_can_set_its_created_timestamp()
+    {
+        $this->set('created', strtotime('June 3rd 2014'))->shouldBe(true);
+    }
+
+    function it_can_get_its_updated_timestamp()
+    {
+        $this->get('updated')->shouldBe(strtotime('June 2nd 2014 2:30pm'));
+    }
+
+    function it_can_get_its_updated_timestamp_in_another_format()
+    {
+        $this->get('updated', 'd/m/y')
+            ->shouldBe(date('d/m/y', strtotime('June 2nd 2014 2:30pm')));
+    }
+
+    function it_can_set_its_updated_timestamp()
+    {
+        $this->set('updated', strtotime('June 3rd 2014 3:00pm'))
+            ->shouldBe(true);
     }
 }
