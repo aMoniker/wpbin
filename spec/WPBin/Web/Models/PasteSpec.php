@@ -5,32 +5,35 @@ namespace spec\WPBin\Web\Models;
 use PhpSpec\Laravel\EloquentModelBehavior;
 use Prophecy\Argument;
 
-class TagSpec extends EloquentModelBehavior
+class PasteSpec extends EloquentModelBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('WPBin\Web\Models\Tag');
+        $this->shouldHaveType('WPBin\Web\Models\Paste');
     }
 
     function it_should_have_a_table()
     {
-        $this->table->shouldBe('tags');
+        $this->table->shouldBe('pastes');
     }
 
     function it_should_have_fillable_defined()
     {
-        $this->getFillable()->shouldReturn(array('name', 'url'));
+        $this->getFillable()->shouldReturn([
+            'title', 'content', 'user_id', 'parent_id', 'hash'
+        ]);
     }
 
     function it_should_be_able_to_save_data()
     {
-        $this->name = 'test_tag';
-        $this->url  = 'test_url';
+        $this->title = 'Foo';
+        $this->content = 'Bar';
         $this->save()->shouldBe(true);
+
     }
 
     function it_should_be_able_get_get_data()
     {
-        $this::whereName('test_tag')->first()->url->shouldBe('test_url');
+        $this::whereTitle('Foo')->first()->content->shouldBe('Bar');
     }
 }

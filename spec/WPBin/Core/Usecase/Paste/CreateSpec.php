@@ -2,21 +2,27 @@
 
 namespace spec\WPBin\Core\Usecase\Paste;
 
+use WPBin\Core\Entity\Paste;
+use WPBin\Core\Tool\Validator\Paste as PasteValidator;
+use WPBin\Core\Exception\ValidatorException;
 use WPBin\Core\Usecase\Paste\CreateData;
 use WPBin\Core\Usecase\Paste\CreateRepository;
-use WPBin\Core\Tool\Validator;
 
 use PhpSpec\ObjectBehavior;
+use Prophecy\Argument;
 
 class CreateSpec extends ObjectBehavior
 {
-    function let(CreateRepository $repo, Validator $valid, CreateData $data)
+    function let(CreateRepository $repo, CreateData $data, Paste $paste, PasteValidator $validator)
     {
         $data->beConstructedWith(array());
         $data->title = 'My Paste';
         $data->content = 'omg all the code';
 
-        $this->beConstructedWith($repo, $valid);
+        $repo->create(Argument::any())->willReturn($paste);
+        $validator->check(Argument::any())->willReturn(true);
+
+        $this->beConstructedWith($repo, $validator);
     }
 
     function it_is_initializable()
@@ -24,9 +30,20 @@ class CreateSpec extends ObjectBehavior
         $this->shouldHaveType('WPBin\Core\Usecase\Paste\Create');
     }
 
-    function it_interacts_with_the_validator($valid, $repo, $data)
+    function it_interacts_and_returns_an_entity($data)
     {
-        $valid->check($data)->shouldBeCalled()->willReturn(true);
-        $this->interact($data);
+        $this->interact($data)->shouldHaveType('WPBin\Core\Entity\Paste');
+    }
+
+    function it_interacts_and_throws_an_exception(
+        $repo, $data, PasteValidator $validator)
+    {
+        $exception = new ValidatorException('oops', ['oh' => 'shit']);
+        $validator->check(Argument::any())->willThrow($exception);
+
+        $this->beConstructedWith($repo, $validator);
+
+        $this->shouldThrow('WPBin\Core\Exception\ValidatorException')
+            ->duringInteract($data);
     }
 }
