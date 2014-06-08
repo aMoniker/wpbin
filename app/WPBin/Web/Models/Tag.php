@@ -7,5 +7,5 @@ use WPBin\Web\Model;
 class Tag extends Model
 {
     public $table = 'tags';
-    protected $fillable = array('name', 'url');
+    protected $fillable = ['name', 'url'];
 }
