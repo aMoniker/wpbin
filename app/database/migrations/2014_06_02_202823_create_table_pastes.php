@@ -17,7 +17,7 @@ class CreateTablePastes extends Migration {
 			$table->engine = 'InnoDB';
 
 			$table->bigIncrements('id')->unsigned();
-			$table->bigInteger('parent_id')->unsigned()->default(0);
+			$table->bigInteger('parent_id')->unsigned()->nullable()->default(null);
 			$table->bigInteger('user_id')->unsigned()->nullable()->default(null);
 			$table->string('hash', 127);
 			$table->string('title', 255)->nullable()->default(null);
