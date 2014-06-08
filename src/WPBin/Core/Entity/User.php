@@ -4,7 +4,6 @@ namespace WPBin\Core\Entity;
 
 use WPBin\Core\Entity;
 use WPBin\Core\Traits\Entity\Timestamps;
-use WPBin\Core\Tool\Validator\User as UserValidator;
 
 class User extends Entity
 {
@@ -21,10 +20,4 @@ class User extends Entity
         'id', 'first_name', 'last_name', 'username',
         'email', 'active', 'created', 'updated',
     ];
-
-    public function __construct(Array $data, UserValidator $validator)
-    {
-        $this->validator = $validator;
-        parent::__construct($data);
-    }
 }

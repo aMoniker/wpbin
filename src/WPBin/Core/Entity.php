@@ -2,15 +2,11 @@
 
 namespace WPBin\Core;
 
-use WPBin\Core\Traits\Entity\Validation;
-
 abstract class Entity
 {
-    use Validation;
-
     protected $_accessors = [];
 
-    public function __construct(Array $data)
+    public function __construct(Array $data = [])
     {
         $this->setByArray($data);
     }
@@ -34,7 +30,8 @@ abstract class Entity
     public function set($property, $value)
     {
         if (!in_array($property, $this->_accessors)) { return false; }
-        return $this->validateAndSet($property, $value);
+        $this->$property = $value;
+        return true;
     }
 
     public function setByArray(Array $data)

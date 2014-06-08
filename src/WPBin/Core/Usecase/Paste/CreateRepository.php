@@ -2,8 +2,9 @@
 
 namespace WPBin\Core\Usecase\Paste;
 
+use WPBin\Core\Entity\Paste;
+
 interface CreateRepository
 {
-    public function hasContent($content);
-    public function create($title, $content, $parent_id, $user_id);
+    public function create(Paste $entity);
 }

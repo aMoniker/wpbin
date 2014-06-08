@@ -2,30 +2,33 @@
 
 namespace WPBin\Core\Usecase\Paste;
 
+use WPBin\Core\Entity\Paste;
+use WPBin\Core\Tool\Validator\Paste as PasteValidator;
 use WPBin\Core\Usecase\Paste\CreateData;
 use WPBin\Core\Usecase\Paste\CreateRepository;
-use WPBin\Core\Tool\Validator;
 
 class Create
 {
     private $repo;
-    private $valid;
+    private $validator;
 
-    public function __construct(CreateRepository $repo, Validator $valid)
+    public function __construct(CreateRepository $repo, PasteValidator $validator)
     {
         $this->repo = $repo;
-        $this->valid = $valid;
+        $this->validator = $validator;
     }
 
     public function interact(CreateData $data)
     {
-        $this->valid->check($data);
+        $entity = new Paste([
+            'title'     => $data->title,
+            'content'   => $data->content,
+            'parent_id' => $data->parent_id,
+            'user_id'   => $data->user_id,
+        ]);
 
-        return $this->repo->create(
-            $data->title,
-            $data->content,
-            $data->parent_id,
-            $data->user_id
-        );
+        $this->validator->check($entity);
+
+        return $this->repo->create($entity);
     }
 }
