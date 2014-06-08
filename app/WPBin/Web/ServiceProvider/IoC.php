@@ -9,6 +9,9 @@ class IoC extends ServiceProvider {
         'WPBin\Core\Usecase\Tag\CreateRepository'
             => 'WPBin\Web\Repository\Tag\Create',
 
+        'WPBin\Core\Usecase\Paste\CreateRepository'
+            => 'WPBin\Web\Repository\Paste\Create',
+
         'WPBin\Core\Tool\Validator\Tag'
             => 'WPBin\Web\Tool\Validator\Tag',
 
