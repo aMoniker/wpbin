@@ -8,6 +8,7 @@ abstract class Repository
 
     protected function entityFromModel($model)
     {
+        if (!$model) { return null; }
         return \App::make($this->entity, [$model->toEntityArray()]);
     }
 }
