@@ -1,0 +1,36 @@
+{
+  "name": "prism",
+  "main": [
+    "prism.js",
+    "prism.css"
+  ],
+  "homepage": "http://prismjs.com",
+  "authors": "Lea Verou",
+  "description": "Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "img",
+    "templates",
+    "CNAME",
+    "*.html",
+    "style.css",
+    "favicon.png",
+    "logo.svg",
+    "download.js",
+    "prefixfree.min.js",
+    "utopia.js",
+    "code.js",
+    "components.js"
+  ],
+  "_release": "55724eb9a0",
+  "_resolution": {
+    "type": "branch",
+    "branch": "gh-pages",
+    "commit": "55724eb9a0ac47dba614e5767f9bc9084a1cf294"
+  },
+  "_source": "git://github.com/LeaVerou/prism.git",
+  "_target": "gh-pages",
+  "_originalSource": "prism",
+  "_direct": true
+}
