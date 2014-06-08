@@ -4,14 +4,12 @@ namespace WPBin\Web\Repository;
 
 use WPBin\Web\Repository;
 use WPBin\Web\Models\Tag as TagModel;
-use WPBin\Core\Entity\Tag as TagEntity;
-use WPBin\Core\Entity\TagRepository;
-use WPBin\Core\Usecase\Tag\CreateRepository;
 
-class Tag extends Repository implements
-    TagRepository,
-    CreateRepository
-{
+use WPBin\Core\Entity\TagRepository;
+use WPBin\Core\Usecase\Tag\CreateData;
+use WPBin\Core\Exception\ValidationException;
+
+class Tag extends Repository implements TagRepository {
     protected $entity = 'WPBin\Core\Entity\Tag';
 
     public function get($id)
@@ -30,14 +28,15 @@ class Tag extends Repository implements
 
     public function create($name, $url)
     {
-        // validate here
+        $usecase = \App::make('WPBin\Core\Usecase\Tag\Create');
 
-        $tag = new TagModel(array(
-            'name' => $name,
-            'url'  => $url,
-        ));
-        $tag->save();
-
-        return $this->entityFromModel($tag);
+        try {
+            return $usecase->interact(new CreateData(array(
+                'name' => $name,
+                'url'  => $url,
+            )));
+        } catch (ValidationException $e) {
+            return null;
+        }
     }
 }
