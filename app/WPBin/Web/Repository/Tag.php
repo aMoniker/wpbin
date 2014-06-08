@@ -9,7 +9,8 @@ use WPBin\Core\Entity\TagRepository;
 use WPBin\Core\Usecase\Tag\CreateData;
 use WPBin\Core\Exception\ValidationException;
 
-class Tag extends Repository implements TagRepository {
+class Tag extends Repository implements TagRepository
+{
     protected $entity = 'WPBin\Core\Entity\Tag';
 
     public function get($id)
@@ -31,12 +32,13 @@ class Tag extends Repository implements TagRepository {
         $usecase = \App::make('WPBin\Core\Usecase\Tag\Create');
 
         try {
-            return $usecase->interact(new CreateData(array(
+            return $usecase->interact(new CreateData([
                 'name' => $name,
                 'url'  => $url,
-            )));
+            ]));
         } catch (ValidationException $e) {
             return null;
+            // TODO: do something with the error here (pass to frontend?)
         }
     }
 }
