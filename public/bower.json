@@ -1,0 +1,22 @@
+{
+  "name": "WPBin",
+  "version": "0.0.1",
+  "authors": [
+    "Jim Greenleaf <jim@greenle.af>"
+  ],
+  "description": "wpbin.io is just the coolest Wordpress paste site, you know?",
+  "license": "Copyright 2014 Viresco LLC",
+  "homepage": "http://wpbin.io/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.2.3",
+    "prism": "gh-pages"
+  }
+}
