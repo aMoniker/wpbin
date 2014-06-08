@@ -5,7 +5,8 @@
 	"license": "Copyright 2014 Viresco LLC",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"nategood/httpful": "*"
+		"nategood/httpful": "*",
+		"rcrowe/twigbridge": "0.6.x-dev"
 	},
 	"require-dev": {
 		"phpspec/phpspec": "~2.0",

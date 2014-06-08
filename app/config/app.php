@@ -122,6 +122,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'TwigBridge\ServiceProvider',
+
 		'WPBin\Web\ServiceProvider\IoC',
 
 	),
