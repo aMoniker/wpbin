@@ -20,6 +20,7 @@
     "prism": "gh-pages",
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2",
-    "font-awesome": "~4.1.0"
+    "font-awesome": "~4.1.0",
+    "meyer-reset": "*"
   }
 }
