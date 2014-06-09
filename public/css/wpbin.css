@@ -2551,3 +2551,9 @@ table {
 .fa-bomb:before {
   content: "\f1e2";
 }
+
+/* line 1, ../sass/components/_header.scss */
+#header {
+  width: 100%;
+  background: #2b80a3;
+}

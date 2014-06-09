@@ -4,6 +4,7 @@
 @import "font-awesome";
 
 @import "variables";
+@import "colors";
 // @import "mixins";
 // @import "reset";
 // @import "layout";
@@ -47,6 +48,6 @@
 // @import "foundation/components/type.scss";
 // @import "foundation/components/visibility.scss";
 
-// @import "components/foo";
+@import "components/header";
 
 @import "pages/home";
