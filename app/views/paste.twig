@@ -4,7 +4,11 @@
     {{ parent() }}
     <div class="row show-bin">
         <div class="small-12 columns">
-            {{ paste.get('content') }}
+        {% spaceless %}
+            <pre>
+                <code class="language-php">{{ paste.get('content') }}</code>
+            </pre>
+        {% endspaceless %}
         </div>
     </div>
 {% endblock %}
