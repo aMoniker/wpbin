@@ -15,4 +15,6 @@ return array(
 
 	'debug' => true,
 
+	'host_ip' => '192.168.0.2' // this is used for livereload
+
 );
