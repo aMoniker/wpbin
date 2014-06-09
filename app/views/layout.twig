@@ -13,7 +13,24 @@
     <body>
         <header id="header">
             {% block header %}
-                nav stuff
+            <nav class="top-bar" data-topbar>
+                <ul class="title-area">
+                    <li class="logo">
+                        <a href="{{ url('/') }}" title="WPBin" id="logo">
+                            <img src="{{ url('/images/wpbin-logo.png') }}">
+                        </a>
+                        <span class="tagline">{{ wpbin_tagline }}</span>
+                    </li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="active">
+                            <a href="/"><i class="fa fa-plus-square-o"></i>&nbsp;Bin it!</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
             {% endblock %}
         </header>
 
@@ -23,7 +40,6 @@
 
         <footer id="footer">
             {% block footer %}
-                footer stuff
             {% endblock %}
         </footer>
     </body>
