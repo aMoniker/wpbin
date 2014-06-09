@@ -35,6 +35,7 @@ module.exports = function(grunt) {
                         'bower_components/modernizr/modernizr.js',
                         'bower_components/jquery/dist/jquery.js',
                         'bower_components/prism/prism.js',
+                        'bower_components/foundation/js/foundation.topbar.js',
                         // 'bower_components/foundation/js/foundation.abide.js',
                         // 'bower_components/foundation/js/foundation.accordion.js',
                         // 'bower_components/foundation/js/foundation.alert.js',
@@ -51,7 +52,6 @@ module.exports = function(grunt) {
                         // 'bower_components/foundation/js/foundation.slider.js',
                         // 'bower_components/foundation/js/foundation.tab.js',
                         // 'bower_components/foundation/js/foundation.tooltip.js',
-                        // 'bower_components/foundation/js/foundation.topbar.js',
                     ]
                 },
                 options: {
