@@ -1,4 +1,33 @@
 #header {
     width: 100%;
+    color: $color-light;
+    font-size: rem-calc(18px);
     background: $color-primary;
+    position: relative;
+    z-index: 100;
+
+    .logo {
+        #logo {
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+
+            img {
+                height: 100%;
+                display: block;
+                padding: 5px;
+            }
+        }
+        
+        .tagline {
+            display: inline-block;
+            vertical-align: top;
+            font-size: rem-calc(13px);
+        }
+    }
+
+
+    .top-bar-section ul li > a {
+        font-size: rem-calc(18px);
+    }
 }

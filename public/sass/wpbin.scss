@@ -5,9 +5,9 @@
 
 @import "variables";
 @import "colors";
+@import "global";
 // @import "mixins";
-// @import "reset";
-// @import "layout";
+@import "layout";
 
 // @import "foundation/components/accordion.scss";
 // @import "foundation/components/alert-boxes.scss";
@@ -44,10 +44,11 @@
 // @import "foundation/components/tabs.scss";
 // @import "foundation/components/thumbs.scss";
 // @import "foundation/components/tooltips.scss";
-// @import "foundation/components/top-bar.scss";
+@import "foundation/components/top-bar.scss";
 // @import "foundation/components/type.scss";
 // @import "foundation/components/visibility.scss";
 
 @import "components/header";
+@import "components/footer";
 
 @import "pages/home";
