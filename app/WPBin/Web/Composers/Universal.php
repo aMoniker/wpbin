@@ -11,6 +11,7 @@ final class Universal
 
         $view
             ->with('debug', $debug)
+            ->with('wpbin_tagline', 'wpbin.io is just the coolest Wordpress paste site, you know?')
             ;
 
         if ($debug) {
