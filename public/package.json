@@ -1,0 +1,14 @@
+{
+  "name": "WPBin",
+  "version": "0.0.1",
+  "description": "wpbin.io is just the coolest Wordpress paste site, you know?",
+  "author": "Jim Greenleaf <jim@greenle.af>",
+  "license": "Copyright 2014 Viresco LLC",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-compass": "~0.8.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-notify": "~0.3.0"
+  }
+}
