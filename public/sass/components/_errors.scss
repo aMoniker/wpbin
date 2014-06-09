@@ -1,0 +1,14 @@
+#content {
+    .main-errors {
+        padding-left: rem-calc(15px);
+        padding-right: rem-calc(15px);
+
+        ul.errors {
+            color: $color-light;
+            background: $color-danger;
+            border: 1px solid shade($color-danger, 20%);
+            border-radius: rem-calc(5px);
+            padding: rem-calc(10px) rem-calc(15px);
+        }
+    }
+}

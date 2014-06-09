@@ -8,7 +8,6 @@
 @import "colors";
 @import "global";
 // @import "mixins";
-@import "layout";
 
 // @import "foundation/components/accordion.scss";
 // @import "foundation/components/alert-boxes.scss";
@@ -49,7 +48,9 @@
 // @import "foundation/components/type.scss";
 // @import "foundation/components/visibility.scss";
 
+@import "layout";
 @import "components/header";
 @import "components/footer";
+@import "components/errors";
 
 @import "pages/home";

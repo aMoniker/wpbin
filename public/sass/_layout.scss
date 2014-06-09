@@ -8,4 +8,8 @@
     padding: 45px 0 0 0;
 
     background: $color-light;
+
+    > .row {
+        padding-top: rem-calc(15px);
+    }
 }

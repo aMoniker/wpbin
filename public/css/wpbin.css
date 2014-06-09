@@ -2564,18 +2564,6 @@ a {
   text-decoration: none;
 }
 
-/* line 1, ../sass/_layout.scss */
-#content {
-  position: fixed;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 45px 0 0 0;
-  background: #f7f7f7;
-}
-
 /* line 324, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.2.3/";
@@ -5717,6 +5705,22 @@ meta.foundation-mq-topbar {
     position: absolute !important;
   }
 }
+/* line 1, ../sass/_layout.scss */
+#content {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 45px 0 0 0;
+  background: #f7f7f7;
+}
+/* line 12, ../sass/_layout.scss */
+#content > .row {
+  padding-top: 0.9375rem;
+}
+
 /* line 1, ../sass/components/_header.scss */
 #header {
   width: 100%;
@@ -5757,12 +5761,42 @@ meta.foundation-mq-topbar {
   bottom: 0;
 }
 
-/* line 2, ../sass/pages/_home.scss */
-#content .new-bin {
-  padding-top: 0.9375rem;
+/* line 2, ../sass/components/_errors.scss */
+#content .main-errors {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
-/* line 5, ../sass/pages/_home.scss */
+/* line 6, ../sass/components/_errors.scss */
+#content .main-errors ul.errors {
+  color: #f7f7f7;
+  background: #cf4742;
+  border: 1px solid #a53834;
+  border-radius: 0.3125rem;
+  padding: 0.625rem 0.9375rem;
+}
+
+/* line 3, ../sass/pages/_home.scss */
+#content .new-bin label:last-of-type {
+  position: relative;
+  cursor: text;
+}
+/* line 7, ../sass/pages/_home.scss */
+#content .new-bin label:last-of-type:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/images/wpbin-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+/* line 22, ../sass/pages/_home.scss */
 #content .new-bin textarea {
   resize: vertical;
   min-height: 25rem;
+  font-family: Courier New, sans-serif;
 }
