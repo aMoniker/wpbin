@@ -1,12 +1,17 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
+    {{ parent() }}
     <div class="row new-bin">
         <div class="small-12 columns">
             <form action="/" method="POST">
                 <label>
-                    <span>Bin all the things!</span>
-                    <textarea name="paste" placeholder="herein paste ye code"></textarea>
+                    <span>Name thy Bin</span>
+                    <input type="text" name="paste-title">
+                </label>
+                <label>
+                    <span>Your code, monsieur</span>
+                    <textarea name="paste" placeholder=""></textarea>
                 </label>
                 <button type="submit">Bin It!</button>
             </form>

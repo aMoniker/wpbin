@@ -35,7 +35,20 @@
         </header>
 
         <div id="content">
-            {% block content %}{% endblock %}
+            {% block content %}
+                {% set errs = errors.toArray() %}
+                {% if errs %}
+                <div class="row main-errors">
+                    <ul class="errors small-12 columns">
+                    {% for err in errs %}
+                        {% for e in err %}
+                        <li>{{ e }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            {% endblock %}
         </div>
 
         <footer id="footer">
