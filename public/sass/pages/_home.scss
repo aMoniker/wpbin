@@ -1,0 +1,10 @@
+#content {
+    .new-bin {
+        padding-top: rem-calc(15px);
+
+        textarea {
+            resize: vertical;
+            min-height: rem-calc(400px);
+        }
+    }
+}

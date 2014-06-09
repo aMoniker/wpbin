@@ -4,6 +4,7 @@
 @import "font-awesome";
 
 @import "variables";
+@import "settings";
 @import "colors";
 @import "global";
 // @import "mixins";
@@ -13,15 +14,15 @@
 // @import "foundation/components/alert-boxes.scss";
 // @import "foundation/components/block-grid.scss";
 // @import "foundation/components/breadcrumbs.scss";
-// @import "foundation/components/button-groups.scss";
-// @import "foundation/components/buttons.scss";
+@import "foundation/components/button-groups.scss";
+@import "foundation/components/buttons.scss";
 // @import "foundation/components/clearing.scss";
 // @import "foundation/components/dropdown-buttons.scss";
 // @import "foundation/components/dropdown.scss";
 // @import "foundation/components/flex-video.scss";
-// @import "foundation/components/forms.scss";
-// @import "foundation/components/global.scss";
-// @import "foundation/components/grid.scss";
+@import "foundation/components/forms.scss";
+@import "foundation/components/global.scss";
+@import "foundation/components/grid.scss";
 // @import "foundation/components/inline-lists.scss";
 // @import "foundation/components/joyride.scss";
 // @import "foundation/components/keystrokes.scss";
