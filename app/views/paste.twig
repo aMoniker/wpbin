@@ -1,0 +1,10 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="row show-bin">
+        <div class="small-12 columns">
+            {{ paste.get('content') }}
+        </div>
+    </div>
+{% endblock %}

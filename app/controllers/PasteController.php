@@ -2,7 +2,8 @@
 
 use WPBin\Core\Entity\PasteRepository;
 
-class PasteController extends BaseController {
+class PasteController extends BaseController
+{
 
     protected $repo;
 
@@ -36,6 +37,19 @@ class PasteController extends BaseController {
 
         // redirect to the hash url
         return Redirect::route('hash', array('hash' => $paste->get('hash')));
+    }
+
+    public function show($hash)
+    {
+        $hash = strtolower($hash);
+
+        $paste = $this->repo->getByHash($hash);
+
+        if (!$paste) {
+            throw new NotFoundHttpException;
+        }
+
+        return View::make('paste', ['paste' => $paste]);
     }
 
 }
