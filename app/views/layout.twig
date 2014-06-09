@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {% block head %}
+        <title>{% block title %}{% endblock %} - WPBin</title>
+        <link rel="stylesheet" href="{{ url('/css/wpbin.css') }}">
+        <script type="text/javascript" src="{{ url('/js/wpbin.min.js') }}"></script>
+        {% if debug %}
+            <script src="http://{{ host_ip }}:35729/livereload.js?snipver=1"></script>
+        {% endif %}
+    {% endblock %}
+    </head>
+    <body>
+        <header id="header">
+            {% block header %}
+                nav stuff
+            {% endblock %}
+        </header>
+
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <footer id="footer">
+            {% block footer %}
+                footer stuff
+            {% endblock %}
+        </footer>
+    </body>
+</html>
