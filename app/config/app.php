@@ -125,6 +125,7 @@ return array(
 		'TwigBridge\ServiceProvider',
 
 		'WPBin\Web\ServiceProvider\IoC',
+		'WPBin\Web\ServiceProvider\Composer',
 
 	),
 
