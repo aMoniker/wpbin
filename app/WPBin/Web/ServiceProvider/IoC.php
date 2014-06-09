@@ -6,8 +6,14 @@ use Illuminate\Support\ServiceProvider;
 
 class IoC extends ServiceProvider {
     protected $bind_mappings = [
+        'WPBin\Core\Entity\TagRepository'
+            => 'WPBin\Web\Repository\Tag',
+
         'WPBin\Core\Usecase\Tag\CreateRepository'
             => 'WPBin\Web\Repository\Tag\Create',
+
+        'WPBin\Core\Entity\PasteRepository'
+            => 'WPBin\Web\Repository\Paste',
 
         'WPBin\Core\Usecase\Paste\CreateRepository'
             => 'WPBin\Web\Repository\Paste\Create',
