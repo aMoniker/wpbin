@@ -5713,10 +5713,11 @@ meta.foundation-mq-topbar {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 45px 0 0 0;
+  margin: 45px 0 0 0;
+  overflow-y: auto;
   background: #f7f7f7;
 }
-/* line 12, ../sass/_layout.scss */
+/* line 13, ../sass/_layout.scss */
 #content > .row {
   padding-top: 0.9375rem;
 }
