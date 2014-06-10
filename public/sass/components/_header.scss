@@ -10,7 +10,7 @@
         #logo {
             height: 100%;
             display: inline-block;
-            vertical-align: top;
+            vertical-align: middle;
 
             img {
                 height: 100%;
@@ -21,7 +21,7 @@
         
         .tagline {
             display: inline-block;
-            vertical-align: top;
+            vertical-align: middle;
             font-size: rem-calc(13px);
         }
     }

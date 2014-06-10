@@ -6,7 +6,7 @@
         <div class="small-12 medium-8 columns show-bin-content">
             {% set title = paste.get('title') %}
             {% if title %}
-                <h1>{{ title }}</h1>
+                <h3>{{ title }}</h3>
             {% endif %}
             {% spaceless %}
             <pre>
@@ -16,7 +16,7 @@
         </div>
         {% if tags %}
         <div class="small-12 medium-4 columns show-bin-sidebar">
-            <h1>Codex Entries</h1>
+            <h3>Codex Entries</h3>
             <ul>
             {% for tag in tags %}
                 <li><a href="{{ tag.get('url') }}" target="_blank">{{ tag.get('name') }}</a></li>

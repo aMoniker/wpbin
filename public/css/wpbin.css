@@ -5705,6 +5705,685 @@ meta.foundation-mq-topbar {
     position: absolute !important;
   }
 }
+/* line 150, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.text-left {
+  text-align: left !important;
+}
+
+/* line 151, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.text-right {
+  text-align: right !important;
+}
+
+/* line 152, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.text-center {
+  text-align: center !important;
+}
+
+/* line 153, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.text-justify {
+  text-align: justify !important;
+}
+
+@media only screen and (max-width: 40em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .small-only-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .small-only-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .small-only-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .small-only-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .small-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .small-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .small-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .small-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .medium-only-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .medium-only-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .medium-only-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .medium-only-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .medium-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .medium-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .medium-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .medium-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .large-only-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .large-only-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .large-only-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .large-only-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .large-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .large-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .large-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .large-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xlarge-only-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xlarge-only-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xlarge-only-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xlarge-only-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xlarge-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xlarge-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xlarge-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xlarge-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen and (min-width: 120.063em) and (max-width: 99999999em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xxlarge-only-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xxlarge-only-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xxlarge-only-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xxlarge-only-text-justify {
+    text-align: justify !important;
+  }
+}
+@media only screen and (min-width: 120.063em) {
+  /* line 157, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xxlarge-text-left {
+    text-align: left !important;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xxlarge-text-right {
+    text-align: right !important;
+  }
+
+  /* line 159, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xxlarge-text-center {
+    text-align: center !important;
+  }
+
+  /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .xxlarge-text-justify {
+    text-align: justify !important;
+  }
+}
+/* Typography resets */
+/* line 188, ../bower_components/foundation/scss/foundation/components/_type.scss */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* Default Link Styles */
+/* line 212, ../bower_components/foundation/scss/foundation/components/_type.scss */
+a {
+  color: #008cba;
+  text-decoration: none;
+  line-height: inherit;
+}
+/* line 217, ../bower_components/foundation/scss/foundation/components/_type.scss */
+a:hover, a:focus {
+  color: #0078a0;
+}
+/* line 225, ../bower_components/foundation/scss/foundation/components/_type.scss */
+a img {
+  border: none;
+}
+
+/* Default paragraph styles */
+/* line 229, ../bower_components/foundation/scss/foundation/components/_type.scss */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+}
+/* line 237, ../bower_components/foundation/scss/foundation/components/_type.scss */
+p.lead {
+  font-size: 1.21875rem;
+  line-height: 1.6;
+}
+/* line 239, ../bower_components/foundation/scss/foundation/components/_type.scss */
+p aside {
+  font-size: 0.875rem;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* Default header styles */
+/* line 247, ../bower_components/foundation/scss/foundation/components/_type.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+/* line 257, ../bower_components/foundation/scss/foundation/components/_type.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 60%;
+  color: #6f6f6f;
+  line-height: 0;
+}
+
+/* line 264, ../bower_components/foundation/scss/foundation/components/_type.scss */
+h1 {
+  font-size: 2.125rem;
+}
+
+/* line 265, ../bower_components/foundation/scss/foundation/components/_type.scss */
+h2 {
+  font-size: 1.6875rem;
+}
+
+/* line 266, ../bower_components/foundation/scss/foundation/components/_type.scss */
+h3 {
+  font-size: 1.375rem;
+}
+
+/* line 267, ../bower_components/foundation/scss/foundation/components/_type.scss */
+h4 {
+  font-size: 1.125rem;
+}
+
+/* line 268, ../bower_components/foundation/scss/foundation/components/_type.scss */
+h5 {
+  font-size: 1.125rem;
+}
+
+/* line 269, ../bower_components/foundation/scss/foundation/components/_type.scss */
+h6 {
+  font-size: 1rem;
+}
+
+/* line 271, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.subheader {
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: normal;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 273, ../bower_components/foundation/scss/foundation/components/_type.scss */
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0;
+}
+
+/* Helpful Typography Defaults */
+/* line 282, ../bower_components/foundation/scss/foundation/components/_type.scss */
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+/* line 288, ../bower_components/foundation/scss/foundation/components/_type.scss */
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+/* line 294, ../bower_components/foundation/scss/foundation/components/_type.scss */
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+/* line 299, ../bower_components/foundation/scss/foundation/components/_type.scss */
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: bold;
+  color: #bd260d;
+}
+
+/* Lists */
+/* line 306, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul,
+ol,
+dl {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  list-style-position: outside;
+  font-family: inherit;
+}
+
+/* line 316, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul {
+  margin-left: 1.1rem;
+}
+/* line 318, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul.no-bullet {
+  margin-left: 0;
+}
+/* line 321, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul.no-bullet li ul,
+ul.no-bullet li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* Unordered Lists */
+/* line 334, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul li ul,
+ul li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+/* line 343, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit;
+}
+/* line 346, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul.square {
+  list-style-type: square;
+  margin-left: 1.1rem;
+}
+/* line 347, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul.circle {
+  list-style-type: circle;
+  margin-left: 1.1rem;
+}
+/* line 348, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul.disc {
+  list-style-type: disc;
+  margin-left: 1.1rem;
+}
+/* line 349, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ul.no-bullet {
+  list-style: none;
+}
+
+/* Ordered Lists */
+/* line 353, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ol {
+  margin-left: 1.4rem;
+}
+/* line 356, ../bower_components/foundation/scss/foundation/components/_type.scss */
+ol li ul,
+ol li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+/* Definition Lists */
+/* line 366, ../bower_components/foundation/scss/foundation/components/_type.scss */
+dl dt {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+/* line 370, ../bower_components/foundation/scss/foundation/components/_type.scss */
+dl dd {
+  margin-bottom: 0.75rem;
+}
+
+/* Abbreviations */
+/* line 374, ../bower_components/foundation/scss/foundation/components/_type.scss */
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222222;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help;
+}
+
+/* line 382, ../bower_components/foundation/scss/foundation/components/_type.scss */
+abbr {
+  text-transform: none;
+}
+
+/* Blockquotes */
+/* line 387, ../bower_components/foundation/scss/foundation/components/_type.scss */
+blockquote {
+  margin: 0 0 1.25rem;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #dddddd;
+}
+/* line 392, ../bower_components/foundation/scss/foundation/components/_type.scss */
+blockquote cite {
+  display: block;
+  font-size: 0.8125rem;
+  color: #555555;
+}
+/* line 396, ../bower_components/foundation/scss/foundation/components/_type.scss */
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+/* line 400, ../bower_components/foundation/scss/foundation/components/_type.scss */
+blockquote cite a,
+blockquote cite a:visited {
+  color: #555555;
+}
+
+/* line 406, ../bower_components/foundation/scss/foundation/components/_type.scss */
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+/* Microformats */
+/* line 413, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.vcard {
+  display: inline-block;
+  margin: 0 0 1.25rem 0;
+  border: 1px solid #dddddd;
+  padding: 0.625rem 0.75rem;
+}
+/* line 419, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.vcard li {
+  margin: 0;
+  display: block;
+}
+/* line 423, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.vcard .fn {
+  font-weight: bold;
+  font-size: 0.9375rem;
+}
+
+/* line 430, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.vevent .summary {
+  font-weight: bold;
+}
+/* line 432, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.vevent abbr {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  padding: 0 0.0625rem;
+}
+
+@media only screen and (min-width: 40.063em) {
+  /* line 443, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+
+  /* line 444, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  /* line 445, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  h2 {
+    font-size: 2.3125rem;
+  }
+
+  /* line 446, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  h3 {
+    font-size: 1.6875rem;
+  }
+
+  /* line 447, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  h4 {
+    font-size: 1.4375rem;
+  }
+}
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+/* line 458, ../bower_components/foundation/scss/foundation/components/_type.scss */
+.print-only {
+  display: none !important;
+}
+
+@media print {
+  /* line 460, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 467, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 469, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 471, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 474, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 478, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 484, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 486, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 489, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* line 493, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 500, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 503, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .hide-on-print {
+    display: none !important;
+  }
+
+  /* line 504, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .print-only {
+    display: block !important;
+  }
+
+  /* line 505, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .hide-for-print {
+    display: none !important;
+  }
+
+  /* line 506, ../bower_components/foundation/scss/foundation/components/_type.scss */
+  .show-for-print {
+    display: inherit !important;
+  }
+}
 /* line 1, ../sass/_layout.scss */
 #content {
   position: fixed;
@@ -5735,7 +6414,7 @@ meta.foundation-mq-topbar {
 #header .logo #logo {
   height: 100%;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 /* line 15, ../sass/components/_header.scss */
 #header .logo #logo img {
@@ -5746,7 +6425,7 @@ meta.foundation-mq-topbar {
 /* line 22, ../sass/components/_header.scss */
 #header .logo .tagline {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   font-size: 0.8125rem;
 }
 /* line 30, ../sass/components/_header.scss */
@@ -5923,23 +6602,23 @@ pre[class*="language-"] {
   position: relative;
   cursor: text;
 }
-/* line 7, ../sass/pages/_home.scss */
-#content .new-bin label:last-of-type:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("/images/wpbin-logo.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-}
-/* line 22, ../sass/pages/_home.scss */
+/* line 23, ../sass/pages/_home.scss */
 #content .new-bin textarea {
   resize: vertical;
   min-height: 25rem;
   font-family: Courier New, sans-serif;
+  font-size: 1rem;
+}
+
+/* line 2, ../sass/pages/_paste.scss */
+#content .show-bin .show-bin-content {
+  line-height: 1.25rem;
+}
+/* line 4, ../sass/pages/_paste.scss */
+#content .show-bin .show-bin-content a.token.markdownlink {
+  color: #5aafd3;
+}
+/* line 7, ../sass/pages/_paste.scss */
+#content .show-bin .show-bin-content a.token.markdownlink:hover {
+  border-bottom: 1px dashed #5aafd3;
 }

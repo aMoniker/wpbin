@@ -45,7 +45,7 @@
 // @import "foundation/components/thumbs.scss";
 // @import "foundation/components/tooltips.scss";
 @import "foundation/components/top-bar.scss";
-// @import "foundation/components/type.scss";
+@import "foundation/components/type.scss";
 // @import "foundation/components/visibility.scss";
 
 @import "layout";
@@ -56,3 +56,4 @@
 @import "components/prism-autolinker";
 
 @import "pages/home";
+@import "pages/paste";
