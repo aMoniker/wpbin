@@ -52,11 +52,11 @@ class ScrapeTags extends Command {
 				'/href="\/Class_Reference\/([a-z0-9_]+)"/i'
 			),
 			$this->scrape_wp_page(
-				'http://codex.wordpress.org/Plugin_API/Action_Reference',
+				'http://codex.wordpress.org/Plugin_API/Action_Reference/',
 				'/href="\/Plugin_API\/Action_Reference\/([a-z0-9_]+)"/i'
 			),
 			$this->scrape_wp_page(
-				'http://codex.wordpress.org/Plugin_API/Filter_Reference',
+				'http://codex.wordpress.org/Plugin_API/Filter_Reference/',
 				'/href="\/Plugin_API\/Filter_Reference\/([a-z0-9_]+)"/i'
 			)
 		);
