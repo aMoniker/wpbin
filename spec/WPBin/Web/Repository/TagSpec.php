@@ -18,6 +18,11 @@ class TagSpec extends LaravelObjectBehavior
             ->shouldHaveType('WPBin\Core\Entity\Tag');
     }
 
+    function it_can_get_all_tags()
+    {
+        $this->getAll()->shouldBeArray();
+    }
+
     function it_can_get_a_tag_by_id()
     {
         $tag = $this->create('test_tag_id_name', 'http://another.test.url');

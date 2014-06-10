@@ -15,16 +15,17 @@ class Tag extends Repository implements TagRepository
 
     public function get($id)
     {
-        $tag = TagModel::find($id);
-        if (!$tag) { return null; }
-        return $this->entityFromModel($tag);
+        return $this->entityFromModel(TagModel::find($id));
+    }
+
+    public function getAll()
+    {
+        return $this->entitiesFromCollection(TagModel::all());
     }
 
     public function getByName($name)
     {
-        $tag = TagModel::whereName($name)->first();
-        if (!$tag) { return null; }
-        return $this->entityFromModel($tag);
+        return $this->entityFromModel(TagModel::whereName($name)->first());
     }
 
     public function create($name, $url)
