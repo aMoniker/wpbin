@@ -72,6 +72,8 @@ class PasteController extends BaseController
 
         $paste->set('content', $paste_content);
 
+        // TODO: add caching
+
         return View::make('paste', [
             'paste' => $paste,
             'tags'  => $paste_tags,
