@@ -6622,12 +6622,13 @@ pre[class*="language-"] {
 #content .show-bin .show-bin-content pre, #content .show-bin .show-bin-content code {
   word-break: break-word;
   white-space: pre-wrap;
+  overflow: hidden;
 }
-/* line 10, ../sass/pages/_paste.scss */
+/* line 11, ../sass/pages/_paste.scss */
 #content .show-bin .show-bin-content a.token.markdownlink, #content .show-bin .show-bin-content a.token.md-link {
   color: #5aafd3;
 }
-/* line 13, ../sass/pages/_paste.scss */
+/* line 14, ../sass/pages/_paste.scss */
 #content .show-bin .show-bin-content a.token.markdownlink:hover, #content .show-bin .show-bin-content a.token.md-link:hover {
   border-bottom: 1px dashed #5aafd3;
 }

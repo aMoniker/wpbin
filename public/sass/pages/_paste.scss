@@ -5,6 +5,7 @@
         pre, code {
             word-break: break-word;
             white-space: pre-wrap;
+            overflow: hidden;
         }
 
         a.token.markdownlink, a.token.md-link {
