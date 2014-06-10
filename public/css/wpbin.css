@@ -6614,11 +6614,16 @@ pre[class*="language-"] {
 #content .show-bin .show-bin-content {
   line-height: 1.25rem;
 }
-/* line 4, ../sass/pages/_paste.scss */
+/* line 5, ../sass/pages/_paste.scss */
+#content .show-bin .show-bin-content pre, #content .show-bin .show-bin-content code {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+/* line 10, ../sass/pages/_paste.scss */
 #content .show-bin .show-bin-content a.token.markdownlink {
   color: #5aafd3;
 }
-/* line 7, ../sass/pages/_paste.scss */
+/* line 13, ../sass/pages/_paste.scss */
 #content .show-bin .show-bin-content a.token.markdownlink:hover {
   border-bottom: 1px dashed #5aafd3;
 }
