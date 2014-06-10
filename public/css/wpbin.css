@@ -6411,24 +6411,28 @@ blockquote p {
   z-index: 100;
 }
 /* line 10, ../sass/components/_header.scss */
+#header .top-bar ul, #header .top-bar ul li {
+  height: 100%;
+}
+/* line 16, ../sass/components/_header.scss */
 #header .logo #logo {
   height: 100%;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 15, ../sass/components/_header.scss */
+/* line 21, ../sass/components/_header.scss */
 #header .logo #logo img {
   height: 100%;
   display: block;
   padding: 5px;
 }
-/* line 22, ../sass/components/_header.scss */
+/* line 28, ../sass/components/_header.scss */
 #header .logo .tagline {
   display: inline-block;
   vertical-align: middle;
   font-size: 0.8125rem;
 }
-/* line 30, ../sass/components/_header.scss */
+/* line 36, ../sass/components/_header.scss */
 #header .top-bar-section ul li > a {
   font-size: 1.125rem;
 }

@@ -6,6 +6,12 @@
     position: relative;
     z-index: 100;
 
+    .top-bar {
+        ul, ul li {
+            height: 100%;
+        }
+    }
+
     .logo {
         #logo {
             height: 100%;
