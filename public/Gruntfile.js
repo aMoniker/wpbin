@@ -37,6 +37,7 @@ module.exports = function(grunt) {
                         'bower_components/prism/prism.js',
                         'bower_components/prism/components/prism-php.js',
                         'js/prism-markdown-linker.js',
+                        'js/prism-php-links.js',
                         'bower_components/foundation/js/foundation.topbar.js',
                         // 'bower_components/foundation/js/foundation.abide.js',
                         // 'bower_components/foundation/js/foundation.accordion.js',

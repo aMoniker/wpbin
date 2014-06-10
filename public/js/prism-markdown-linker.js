@@ -24,7 +24,7 @@ for (var language in Prism.languages) {
 }
 
 Prism.hooks.add('wrap', function(env) {
-    if (/-link$/.test(env.type)) {
+    if (env.type === 'md-link') {
         env.tag = 'a';
         
         var href = env.content;
