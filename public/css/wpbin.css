@@ -6601,6 +6601,51 @@ pre[class*="language-"] {
   color: inherit;
 }
 
+/* line 1, ../sass/components/_prism-line-numbers.scss */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 7, ../sass/components/_prism-line-numbers.scss */
+pre.line-numbers > code {
+  position: relative;
+}
+
+/* line 11, ../sass/components/_prism-line-numbers.scss */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 28, ../sass/components/_prism-line-numbers.scss */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 34, ../sass/components/_prism-line-numbers.scss */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
 /* line 3, ../sass/pages/_home.scss */
 #content .new-bin label:last-of-type {
   position: relative;
@@ -6619,16 +6664,10 @@ pre[class*="language-"] {
   line-height: 1.25rem;
 }
 /* line 5, ../sass/pages/_paste.scss */
-#content .show-bin .show-bin-content pre, #content .show-bin .show-bin-content code {
-  word-break: break-word;
-  white-space: pre-wrap;
-  overflow: hidden;
-}
-/* line 11, ../sass/pages/_paste.scss */
 #content .show-bin .show-bin-content a.token.markdownlink, #content .show-bin .show-bin-content a.token.md-link {
   color: #5aafd3;
 }
-/* line 14, ../sass/pages/_paste.scss */
+/* line 8, ../sass/pages/_paste.scss */
 #content .show-bin .show-bin-content a.token.markdownlink:hover, #content .show-bin .show-bin-content a.token.md-link:hover {
   border-bottom: 1px dashed #5aafd3;
 }

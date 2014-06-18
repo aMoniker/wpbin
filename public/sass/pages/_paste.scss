@@ -2,12 +2,6 @@
     .show-bin .show-bin-content {
         line-height: rem-calc(20px);
 
-        pre, code {
-            word-break: break-word;
-            white-space: pre-wrap;
-            overflow: hidden;
-        }
-
         a.token.markdownlink, a.token.md-link {
             color: $color-secondary;
 

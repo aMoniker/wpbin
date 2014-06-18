@@ -36,6 +36,7 @@ module.exports = function(grunt) {
                         'bower_components/jquery/dist/jquery.js',
                         'bower_components/prism/prism.js',
                         'bower_components/prism/components/prism-php.js',
+                        'bower_components/prism/plugins/line-numbers/prism-line-numbers.js',
                         'js/prism-markdown-linker.js',
                         'js/prism-php-links.js',
                         'bower_components/foundation/js/foundation.topbar.js',
