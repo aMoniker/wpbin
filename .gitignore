@@ -9,3 +9,5 @@ Thumbs.db
 /bin/*
 /public/node_modules
 .sass-cache
+/vagrant/Vagrantfile
+/vagrant/conf/playbook.yml
