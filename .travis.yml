@@ -5,4 +5,5 @@ php:
 
 script: "./bin/runtests"
 before_script:
+    - composer install
     - mysql -e 'create database wpbin_test;'
