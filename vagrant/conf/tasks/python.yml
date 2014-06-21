@@ -1,0 +1,7 @@
+- name: python | install packages
+  apt: pkg={{ item }}
+  with_items:
+    - python-dev
+    - python-pip
+    - libmysqlclient-dev
+    - python-mysqldb

@@ -1,0 +1,2 @@
+- name: wpbin | symlink the site into place
+  command: ln -sfn {{ mnt_dir }} /var/www/{{ site_name }}

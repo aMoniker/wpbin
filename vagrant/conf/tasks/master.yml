@@ -1,0 +1,23 @@
+- include: local.yml
+
+- include: profile.yml
+
+- include: apt.yml
+
+- include: php.yml
+
+- include: python.yml
+
+- include: ruby.yml
+
+- include: www.yml
+
+- include: ssl.yml
+
+- include: apache.yml
+
+- include: mysql.yml
+
+- include: redis.yml
+
+- include: wpbin.yml

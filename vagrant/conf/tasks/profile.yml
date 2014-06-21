@@ -1,0 +1,13 @@
+- name: profile | make the .vim directory in /home/vagrant
+  sudo: False
+  file: dest=/home/vagrant/.vim/colors state=directory
+
+- name: profile | copy the profile files to /home/vagrant
+  sudo: False
+  copy: src=profile/{{ item }} dest=/home/vagrant/{{ item }}
+  with_items:
+    - .ackrc
+    - .bash_profile
+    - .git-completion.sh
+    - .vimrc
+    - .vim/colors/solarized.vim

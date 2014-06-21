@@ -1,0 +1,7 @@
+- name: ruby | install
+  apt: pkg={{ item }}
+  with_items:
+    - ruby1.9.1-dev
+
+- name: ruby | install gems
+  gem: name=sass state=latest

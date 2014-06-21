@@ -1,0 +1,5 @@
+- name: local | set the hostname
+  command: hostname {{ site_name }}
+
+- name: local | overwrite /etc/hostname
+  command: sudo sh -c "echo '{{ site_name }}' > /etc/hostname"

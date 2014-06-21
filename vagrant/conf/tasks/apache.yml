@@ -1,0 +1,36 @@
+- name: apache | install
+  apt: pkg=apache2
+
+- name: apache | add ServerName
+  lineinfile: dest=/etc/apache2/apache2.conf state=present regexp=^ServerName\s+.+?$ line="ServerName {{ site_name }}"
+
+- name: apache | remove default sites
+  file: path=/etc/apache2/{{ item }} state=absent
+  with_items:
+    - sites-available/000-default.conf
+    - sites-enabled/000-default.conf
+
+- name: apache | update default ports.conf
+  template: src=templates/apache-ports-conf.j2 dest=/etc/apache2/ports.conf owner=root group=root mode=0644
+
+- name: apache | add site config for {{ site_name }}
+  template: src=templates/apache-site-config.j2 dest=/etc/apache2/sites-available/{{ site_name }}.conf owner=root group=root mode=0644
+
+- name: apache | symlink site template to /sites-enabled for {{ site_name }}
+  shell: ln -sf /etc/apache2/sites-available/{{ site_name }}.conf /etc/apache2/sites-enabled/{{ site_name }}.conf
+
+- name: apache | remove default /var/www/html directory
+  file: path=/var/www/html state=absent
+
+- name: apache | add mods
+  command: a2enmod {{ item }}
+  with_items:
+    - ssl
+    - rewrite
+    - headers
+
+- name: apache | enable php mcrypt
+  command: php5enmod mcrypt
+
+- name: apache | restart apache
+  service: name=apache2 state=restarted enabled=yes

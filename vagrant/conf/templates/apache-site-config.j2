@@ -1,0 +1,32 @@
+{% set sub_docroot = sub_docroot|default('') %}
+
+<VirtualHost *:{{ http_port }}>
+  ServerName www.{{ site_name }}
+  ServerAlias {{ site_name }} *.{{ site_name }}
+  DocumentRoot /var/www/{{ site_name }}/{{ sub_docroot }}
+  {% for env_name, env_value in apache_env_vars.iteritems() %}
+    SetEnv {{ env_name }} {{ env_value }}
+  {% endfor %}
+  <Directory /var/www/{{ site_name }}/{{ sub_docroot }}>
+    Options FollowSymLinks
+    Order deny,allow
+    Allow from all
+  </Directory>
+</VirtualHost>
+
+<VirtualHost *:{{ https_port }}>
+  ServerName www.{{ site_name }}
+  ServerAlias {{ site_name }} *.{{ site_name }}
+  DocumentRoot /var/www/{{ site_name }}/{{ sub_docroot }}
+  SSLEngine on
+  SSLCertificateFile /etc/ssl/{{ site_name }}.crt
+  SSLCertificateKeyFile /etc/ssl/{{ site_name }}.key
+  {% for env_name, env_value in apache_env_vars.iteritems() %}
+    SetEnv {{ env_name }} {{ env_value }}
+  {% endfor %}
+  <Directory /var/www/{{ site_name }}/{{ sub_docroot }}>
+    Options FollowSymLinks
+    Order deny,allow
+    Allow from all
+  </Directory>
+</VirtualHost>
