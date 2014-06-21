@@ -2,7 +2,7 @@
 	"name": "aMoniker/wpbin",
 	"description": "wpbin.io is just the coolest Wordpress paste site",
 	"keywords": ["wordpress", "paste", "wpbin"],
-	"license": "Copyright 2014 Viresco LLC",
+	"license": "AGPL3",
 	"require": {
 		"laravel/framework": "4.2.*",
 		"nategood/httpful": "*",
