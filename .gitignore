@@ -7,6 +7,7 @@ composer.lock
 .DS_Store
 Thumbs.db
 /bin/*
+!/bin/runtests
 /public/node_modules
 .sass-cache
 /vagrant/.vagrant
