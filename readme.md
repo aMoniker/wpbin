@@ -1,6 +1,6 @@
 ## wpbin.io
 
-[![Build Status](https://https://travis-ci.org/aMoniker/wpbin.svg?branch=master)](https://api.travis-ci.org/aMoniker/wpbin)
+[![Build Status](https://travis-ci.org/aMoniker/wpbin.svg?branch=master)](https://travis-ci.org/aMoniker/wpbin)
 
 [http://wpbin.io](http://wpbin.io) is just the coolest Wordpress paste site, you know?
 
