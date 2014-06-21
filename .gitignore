@@ -13,3 +13,4 @@ Thumbs.db
 /vagrant/.vagrant
 /vagrant/Vagrantfile
 /vagrant/conf/playbook.yml
+/.env.*
