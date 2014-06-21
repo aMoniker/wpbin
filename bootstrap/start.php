@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('wpbin.lan.vires.co'),
+	'local' => array('wpbin.lan'),
 
 ));
 
