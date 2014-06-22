@@ -24,11 +24,16 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+$env = $app->detectEnvironment(function() use ($app)
+{
+    if (isset($_ENV['OVERRIDE_ENV'])) {
+        return $_ENV['OVERRIDE_ENV'];
+    }
 
-	'local' => array('wpbin.lan'),
-
-));
+    return $app->detectEnvironment([
+        'local' => ['wpbin.lan'],
+    ]);
+});
 
 /*
 |--------------------------------------------------------------------------

@@ -4,6 +4,9 @@ php:
     - 5.4
     - hhvm
 
+env:
+    - OVERRIDE_ENV=testing
+
 script: "./bin/runtests"
 before_script:
     - composer install
