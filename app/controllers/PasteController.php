@@ -48,7 +48,7 @@ class PasteController extends BaseController
         $paste = $this->repo->getByHash($hash);
 
         if (!$paste) {
-            throw new NotFoundHttpException;
+            App::abort(404);
         }
 
         // TODO: this should go somewhere else
