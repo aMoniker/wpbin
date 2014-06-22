@@ -5,7 +5,7 @@ php:
     - hhvm
 
 env:
-    - OVERRIDE_ENV=testing
+    - LARAVEL_ENV=testing
 
 script: "./bin/runtests"
 before_script:

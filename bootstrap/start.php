@@ -26,8 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(function() use ($app)
 {
-    if (isset($_ENV['OVERRIDE_ENV'])) {
-        return $_ENV['OVERRIDE_ENV'];
+    if (isset($_ENV['LARAVEL_ENV'])) {
+        return $_ENV['LARAVEL_ENV'];
     }
 
     return $app->detectEnvironment([
