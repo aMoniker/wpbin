@@ -1,9 +1,5 @@
 <?php
 
-var_dump('server', $_SERVER);
-var_dump('env', $_ENV);
-
-
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -30,8 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(function() use ($app)
 {
-    if (isset($_ENV['LARAVEL_ENV'])) {
-        return $_ENV['LARAVEL_ENV'];
+    if (isset($_SERVER['LARAVEL_ENV'])) {
+        return $_SERVER['LARAVEL_ENV'];
     }
 
     return $app->detectEnvironment([
