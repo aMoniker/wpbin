@@ -1,5 +1,9 @@
 <?php
 
+var_dump('server', $_SERVER);
+var_dump('env', $_ENV);
+
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
