@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'wpbin',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => $_ENV['database_name'],
+			'username'  => $_ENV['database_user'],
+			'password'  => $_ENV['database_pass'],
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
