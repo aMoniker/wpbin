@@ -1,0 +1,27 @@
+#content {
+    .show-bin .show-bin-content {
+        line-height: rem-calc(20px);
+
+        a.token.markdownlink, a.token.md-link {
+            color: $color-secondary;
+
+            &:hover {
+                border-bottom: 1px dashed $color-secondary;
+            }
+        }
+
+
+        pre.line-numbers > code {
+
+            position: initial;
+        }
+
+        .line-numbers .line-numbers-rows {
+
+            left: 0;
+            padding: 0.25rem 0.3125rem 0.0625rem;
+            margin-top: 0.6rem;
+        }
+
+    }
+}

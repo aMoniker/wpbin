@@ -1,5 +1,0 @@
-- name: redis | install
-  apt: pkg=redis-server
-
-- name: redis | start/restart
-  command: service redis-server restart
