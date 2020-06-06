@@ -1,2 +1,0 @@
-- name: chown symlinked site
-  command: chown -Rh vagrant:www-data /var/www/{{ site_name }}
