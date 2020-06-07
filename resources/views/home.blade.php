@@ -24,7 +24,7 @@
             </label>
             <button
               class="g-recaptcha"
-              data-sitekey="6Ld8FQEVAAAAAPLOHdOxmgESY9FXQQfvykFuXgSk"
+              data-sitekey="{{ env('RECAPTCHA_PUBLIC') }}"
               data-callback="onBinIt"
               data-action="">Bin It!</button>
         </form>
