@@ -11,12 +11,32 @@ use Illuminate\Support\Str;
 
 class PasteController extends Controller
 {
+  private function verifyCaptcha(Request $request)
+  {
+    $ch = curl_init();
+    curl_setopt_array($ch, [
+      CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_POSTFIELDS     => [
+        'secret'   => env('RECAPTCHA_SECRET', ''),
+        'response' => $request->input('g-recaptcha-response'),
+        'remoteip' => $_SERVER['REMOTE_ADDR'],
+      ],
+    ]);
+    $res = json_decode(curl_exec($ch), true);
+    return $res && isset($res['success']) && $res['success'] === true;
+  }
+
     public function create( Request $request )
     {
+        if (!$this->verifyCaptcha($request)) {
+          return Redirect::route("home");
+        }
+
         $errors = [];
 
         $paste = new Paste();
-
         $paste->title = $request->input( 'paste-title' );
         $paste->content = $request->input( 'paste' );
 

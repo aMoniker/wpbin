@@ -1,9 +1,18 @@
 @extends('layout')
 
+@push('scripts')
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script type="text/javascript">
+    function onBinIt(token) {
+      document.getElementById("bin-form").submit();
+    }
+  </script>
+@endpush
+
 @section('content')
 <div class="row new-bin">
     <div class="small-12 columns">
-        <form action="/" method="POST">
+        <form action="/" method="POST" id="bin-form">
             @csrf
             <label>
                 <span>Name thy Bin</span>
@@ -13,7 +22,11 @@
                 <span>Your code, monsieur</span>
                 <textarea name="paste" placeholder=""></textarea>
             </label>
-            <button type="submit">Bin It!</button>
+            <button
+              class="g-recaptcha"
+              data-sitekey="6Ld8FQEVAAAAAPLOHdOxmgESY9FXQQfvykFuXgSk"
+              data-callback="onBinIt"
+              data-action="">Bin It!</button>
         </form>
     </div>
 </div>

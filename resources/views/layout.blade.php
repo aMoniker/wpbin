@@ -4,6 +4,7 @@
         <title>@yield('block_title') - {{ env( 'APP_NAME' ) }}</title>
         <link rel="stylesheet" href="{{ asset('/css/wpbin.css') }}">
         <script type="text/javascript" src="{{ asset('/js/wpbin.js') }}"></script>
+        @stack('scripts')
     </head>
     <body>
         <header id="header">
