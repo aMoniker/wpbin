@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>@yield('block_title') - {{ env( 'APP_NAME' ) }}</title>
+        <title>@yield('block_title', env('APP_NAME'))</title>
         <link rel="stylesheet" href="{{ asset('/css/wpbin.css') }}">
         <script async type="text/javascript" src="{{ asset('/js/wpbin.js') }}"></script>
         @stack('scripts')
