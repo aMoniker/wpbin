@@ -1,8 +1,6 @@
 @extends('layout')
 
-@section('block_title')
-    {{ env('APP_NAME') }} - {{ $paste->title }}
-@endsection
+@section('block_title'){{ env('APP_NAME') }} - {{ $paste->title }}@endsection
 
 @section('content')
 
