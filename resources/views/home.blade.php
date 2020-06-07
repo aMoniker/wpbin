@@ -1,7 +1,7 @@
 @extends('layout')
 
 @push('scripts')
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script async src="https://www.google.com/recaptcha/api.js"></script>
   <script type="text/javascript">
     function onBinIt(token) {
       document.getElementById("bin-form").submit();
