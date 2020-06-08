@@ -4,7 +4,7 @@
         <title>@yield('block_title', env('APP_NAME'))</title>
         <link rel="stylesheet" href="{{ asset('/css/wpbin.css') }}">
         <meta name="description" content="{{ env('APP_TAGLINE') }}">
-        <script async type="text/javascript" src="{{ asset('/js/wpbin.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/wpbin.js') }}"></script>
         @stack('scripts')
     </head>
     <body>
