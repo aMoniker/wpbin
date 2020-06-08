@@ -1,6 +1,5 @@
 #footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    align-content: flex-end;
+    padding: rem-calc(15px) rem-calc(76px) rem-calc(15px) rem-calc(15px);
+    font-size: rem-calc(12px);
 }
