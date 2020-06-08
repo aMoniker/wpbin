@@ -3,6 +3,7 @@
     <head>
         <title>@yield('block_title', env('APP_NAME'))</title>
         <link rel="stylesheet" href="{{ asset('/css/wpbin.css') }}">
+        <meta name="description" content="{{ env('APP_TAGLINE') }}">
         <script async type="text/javascript" src="{{ asset('/js/wpbin.js') }}"></script>
         @stack('scripts')
     </head>
@@ -43,6 +44,7 @@
         </div>
 
         <footer id="footer">
+            This website is open-source. <a href="https://github.com/aMoniker/wpbin">Contribute to WPBin.io by forking the GitHub repository</a>.
             @yield('footer')
         </footer>
     </body>
