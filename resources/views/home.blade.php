@@ -1,7 +1,7 @@
 @extends('layout')
 
 @push('scripts')
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script async src="https://www.google.com/recaptcha/api.js"></script>
   <script type="text/javascript">
     function onBinIt(token) {
       document.getElementById("bin-form").submit();
@@ -24,7 +24,7 @@
             </label>
             <button
               class="g-recaptcha"
-              data-sitekey="6Ld8FQEVAAAAAPLOHdOxmgESY9FXQQfvykFuXgSk"
+              data-sitekey="{{ env('RECAPTCHA_PUBLIC') }}"
               data-callback="onBinIt"
               data-action="">Bin It!</button>
         </form>

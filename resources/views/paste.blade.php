@@ -1,8 +1,6 @@
 @extends('layout')
 
-@section('block_title')
-    {{ $paste->title }}
-@endsection
+@section('block_title'){{ env('APP_NAME') }} - {{ $paste->title }}@endsection
 
 @section('content')
 
@@ -10,9 +8,7 @@
     <div class="small-12 medium-8 columns show-bin-content">
         <h3>{{ $paste->title }}</h3>
 
-        <pre class="line-numbers">
-            <code class="language-phplinks">{{ $paste->content }}</code>
-        </pre>
+        <pre class="line-numbers"><code class="language-phplinks">{{ $paste->content }}</code></pre>
     </div>
 
     @if( ! empty( $tags ) )

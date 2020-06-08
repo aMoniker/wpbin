@@ -14757,6 +14757,8 @@ pre.line-numbers > code {
 }
 
 #content .show-bin .show-bin-content pre.line-numbers > code {
+  background: none;
+  border: none;
   position: initial;
 }
 
