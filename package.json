@@ -21,7 +21,7 @@
     },
     "dependencies": {
         "zurb-foundation-5": "~5.4.7",
-        "prismjs": "^0.0.1",
+        "prismjs": "^1.23.0",
         "html5shiv": "^3.7.3",
         "font-awesome": "^4.1.0",
         "meyer-reset-scss": "^2.0.4",
